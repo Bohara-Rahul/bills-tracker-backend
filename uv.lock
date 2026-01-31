@@ -50,6 +50,7 @@ dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "greenlet" },
     { name = "sqlalchemy" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
@@ -58,6 +59,7 @@ requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.128.0" },
     { name = "greenlet", specifier = ">=3.3.1" },
     { name = "sqlalchemy", specifier = ">=2.0.46" },
+    { name = "uvicorn", specifier = ">=0.40.0" },
 ]
 
 [[package]]
