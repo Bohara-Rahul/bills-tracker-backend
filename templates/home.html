@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block content %}
+<section
+  style="display: flex; justify-content: space-between; align-items: center"
+>
+  <h1 style="text-align: center">Bills Payment - Rahul Bohara</h1>
+  <a href="/add-bill" style="background: black; color: white; padding: 3px 6px;">Add Bill</a>
+</section>
+{% for bill in bills %}
+<div
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+  "
+>
+  <article>
+    <h2>{{ bill.title }}</h2>
+    <p>{{ bill.description }}</p>
+    <p>(Ref: {{ bill.reference }})</p>
+  </article>
+  <article>
+    <p style="text-align: right">${{ bill.amount }}</p>
+    <p style="text-align: right">{{ bill.status }}</p>
+    <p>{{ bill.date_paid }}</p>
+  </article>
+</div>
+{% endfor %} {% endblock content %}
